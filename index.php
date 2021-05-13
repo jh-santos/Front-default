@@ -1,2 +1,2 @@
 <?php require('pages/home.php'); ?>
-<!-- teste 2  -->
+<!-- teste 2 -->
