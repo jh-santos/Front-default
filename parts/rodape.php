@@ -1,1 +1,0 @@
-<footer class="rodape"></footer>

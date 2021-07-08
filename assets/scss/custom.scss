@@ -1,6 +1,12 @@
 // bootstrap
 // font awesome
 // redefinicoes
+// color default 
+$c1 : #fff; // cor para tag a
+$b1 : #00B2FF; // background 1
+$t1 : #00B2FF; // cor para titulo 1
+$t2 : #000; // cor para titulo 2
+
 * {
     margin                : 0;
     padding               : 0;
@@ -20,7 +26,7 @@
     scroll-behavior: smooth;
 
     a {
-        color: unset;
+        color: $c1;
 
         &:active,
         &:focus {
@@ -47,15 +53,6 @@
 // ---------------------FONTS ------------------------
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
-@font-face {
-    font-family: 'alesandra';
-    src        : url('../fonts/Alesandra-Regular.woff2') format('woff2'),
-        url('../fonts/Alesandra-Regular.woff') format('woff');
-    font-weight : normal;
-    font-style  : normal;
-    font-display: swap;
-}
-
 // mixin
 @mixin res-full {
     @media (max-width:2000px) {
@@ -64,7 +61,13 @@
 }
 
 @mixin res-note {
-    @media (max-width:1400px) {
+    @media (max-width:1460px) {
+        @content;
+    }
+}
+
+@mixin res-mac {
+    @media (max-width:1360px) {
         @content;
     }
 }
@@ -99,7 +102,7 @@
     }
 }
 
-@mixin res-mob-small {
+@mixin res-small {
     @media (max-width:375px) {
         @content;
     }
@@ -107,8 +110,10 @@
 
 // -----------------GERAIS ------------------
 * {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+
+    body {
+        font: 100% 'Montserrat', sans-serif;
+    }
 
     h1,
     h2,
@@ -116,15 +121,16 @@
     h4,
     h5,
     h6,
-    p,
-    a,
-    figure {
+    p {
         margin-bottom: 0;
-        line-height  : unset;
+        line-height  : 1rem;
     }
 
+    a,
+    figure,
     button {
         background-color: transparent;
+        margin-bottom   : 0;
     }
 
     // configuração owl carousel nav e dots
@@ -217,28 +223,13 @@
 
 }
 
-@mixin titulo {
-    .titulo {
-        font-size  : 40px;
-        line-height: 50px;
-        color      : #2C7158;
-        font-weight: 500;
-        @content;
-    }
-
-    @include res-lg {
-        .titulo {
-            font-size  : 30px;
-            line-height: 34px;
-        }
-    }
-}
-
-
 
 /*---------------------------------imports e configuracao padrao------------------------*/
 // add moduloss das paginas
-@import "add";
+@import "mixin";
+@import "header";
+@import "footer";
+@import "components";
 
-// PAGINAS
+// MUDANÇAS NAS PAGINAS ESPECIFICAS
 #home {}

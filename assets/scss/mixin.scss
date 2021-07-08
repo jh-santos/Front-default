@@ -1,0 +1,22 @@
+
+@mixin title-1 {
+    .title-1 {
+        font-size  : 40px;
+        line-height: 50px;
+        color      : $t1;
+        font-weight: 500;
+
+        @content;
+    }
+}
+
+@mixin padding {
+    padding-top   : 4rem;
+    padding-bottom: 4rem;
+
+    @include res-lg {
+        padding-top   : 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
