@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 
 // -----------------GERAIS ------------------
 * {
-
     body {
-        font-family: 'Montserrat', sans-serif;
-        font-size  : 100%;
+        font-family: "Montserrat", sans-serif;
     }
 
     h1,
@@ -16,7 +14,7 @@
     h6,
     p {
         margin-bottom: 0;
-        line-height  : inherit;
+        line-height: inherit;
     }
 
     a,
@@ -24,7 +22,6 @@
     label,
     button {
         background-color: transparent;
-        margin-bottom   : 0;
+        margin-bottom: 0;
     }
-
 }

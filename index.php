@@ -1,1 +1,1 @@
-<?php require('modelo-home.php');
+<?php require('pagina-home.php');
